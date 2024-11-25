@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.corpo {
+    background-image: url(imagens/979b714099fa646eea18de913431a0b8\ 1.png);
+}
+
+.frase {
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    z-index: 1;
+    position: absolute;
+    color: white;
+}
+
+.cartas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 150px 0px 110px 0px;
+    margin: 80px 50px 0px 50px;
+    background-color: #2E8B57;
+    border-radius: 30px;
+    position: relative;
+}
+
+img {
+    width: 200px;
+}
+
+.carta {
+    width: 150px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.carta.virada {
+    transform: rotateY(180deg);
+}
+
+.carta img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.carta-frente {
+    transform: rotateY(180deg);
+}
+
+.carta-verso {
+    background-color: #2E8B57;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #2E8B57;
+    padding: 20px; 
+    margin: 30px auto; 
+    width: 300px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    color: white; 
+    text-align: center; 
+}
+
+.contador-tentativas {
+    margin: 10px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.botao-reiniciar {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-reiniciar:hover {
+    background-color: #FF6347;
+}

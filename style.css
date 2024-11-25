@@ -75,7 +75,7 @@ a:hover{
     align-items: center;
     gap: 20px; 
     max-width: 900px;
-    margin: 300px 0px 0px 320px;
+    margin: 290px 0px 0px 320px;
     color: white;
     font-size: 20px;
 } 
@@ -95,13 +95,16 @@ a:hover{
     height: auto;
 }
 
-.titulo_portfolio {
-    color: white;
-    margin: 220px 0px -50px 0px;
+.port {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 22px;
+    font-size: 20px;
+    color: white;
+}
+
+.titulo_portfolio {
+    margin: 220px 0px 0px 0px;
 }
 
 .cobertura {
@@ -138,6 +141,7 @@ a:hover{
     color: white;
     display: flex;
     flex-wrap: nowrap;
+    background-color: 	#808080;
 }
 
 .card > .row > .icon {
@@ -164,8 +168,14 @@ a:hover{
     transition: all .3s ease;
 }
 
+.button-wrapper {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
 .descricao .paragrafo {
-    color: #b0b0ba;
+    color: #FFF;
     margin-top: 5px;
 }
 
@@ -186,17 +196,45 @@ input:checked + label .descricao {
     transform: translateY(0) !important;
 }
 
+.btn-ver-mais {
+    background-color: #A52A2A;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0; 
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    position: absolute; 
+    bottom: 10px; 
+    left: 75%;
+    transform: translateX(-50%); 
+}
+
+.btn-ver-mais:hover {
+    background-color: #FF6347;
+}
+
+input:checked + label .btn-ver-mais {
+    opacity: 1 !important; /* Torna o botão visível quando o card for expandido */
+    transform: translateY(0) !important; /* Coloca o botão no lugar certo */
+}
+
 .card[for="c1"] {
-    background-image: url('assets/Captura\ de\ tela\ 2024-11-21\ 114254.png');
+    background-image: url('assets/memoria.png');
 }
 .card[for="c2"] {
-    background-image: url('assets/myla\ preto\ e\ branco\ 2\ 3\ \(1\).png');
+    background-image: url('assets/calculadora.png');
 }
 .card[for="c3"] {
-    background-image: url('assets/myla\ preto\ e\ branco\ 2\ 3\ \(1\).png');
+    background-image: url('assets/kanban.png');
 }
 .card[for="c4"] {
-    background-image: url('assets/myla\ preto\ e\ branco\ 2\ 3\ \(1\).png');
+    background-image: url('assets/carros.png');
 }
 
 .caixa_skills {
@@ -346,45 +384,58 @@ a:hover{
     padding: 7px;
 }
 
-@media (max-width: 768px){ 
+@media (max-width: 1200px){ 
+
+    body {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .corpo {
+        background-size: cover;
+        height: auto;
+    }
 
     .cabecalho_menu {
-        padding: 20px 10px;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
     }
 
     .cabecalho-nomes{
-        font-size: 18px;
-        padding: 5px 0;
+        font-size: 17px;
     }
 
     .frase{
-        font-size: 5w;
-        padding: 60vh 3vw;
+        font-size: 3vw;
+        padding: 10vw 3vw;
         text-align: center;
     }
 
     .about {
+        max-width: 90%;
         flex-direction: column;
-        margin: 30px;
+        margin: 20px auto;
         font-size: 18px;
     }
 
     .imagem {
         width: 60%;
-        height: auto;
+        /* height: auto; */
+        max-width: 200px;
         border-radius: 20px;
+        margin: 20px auto;
     }
 
     .titulo_sobremim, .titulo_portfolio, .titulo_skills {
-        margin: 20px;
+        margin: 50px;
         text-align: center;
     }
 
     .caixa {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     .card {
@@ -392,31 +443,40 @@ a:hover{
         margin: 10px 0;
     }
 
-    .skills_python, .skills_html, .skills_css, .skills_javascript {
-        width: 80%;
-        margin-left: 50px;
-    }
-
-    .container {
-        flex-direction: column;
-        text-align: left;
-    }
-
-    .footer-content {
-        flex: 1 1 100%;
-        text-align: center;
-        margin: 15px 140px;
-    }
-
-    h3 {
+    .descricao h4 {
         font-size: 20px;
     }
 
-    .social-icons li {
-        font-size: 10px;
+    .skills_python, .skills_html, .skills_css, .skills_javascript {
+        width: 80%;
+        margin: 20px auto;
     }
 
-    .bottom-bar {
-        font-size: 12px;
+    .progress {
+        height: 50;
+    }
+
+    footer .container {
+        /* flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 0px 550px 0px 0px; */
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer .footer-content{ 
+        max-width: 400px;
+    }
+
+    footer .social-icons {
+        justify-content: center;
+    }
+
+    footer .bottom-bar {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 15px;
     }
 }

@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    margin: 0px 25px 0px 0px;
+}
+
+.cor-um{
+    background: #f4e98c;
+}
+
+.cor-dois{
+    background: #FF7F50;
+}
+
+.cor-tres{
+    background: #5b7de2;
+}
+
+.cor-quatro{
+    background: #47b97b;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: calc(100%);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+    border-radius: 5px;
+}
+
+li button:hover {
+    background: #c82333;
+}
+
+.task-item {
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-btn {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    padding: 5px 10px; 
+    font-size: 14px; 
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; 
+}
+
+.remove-btn:hover {
+    background-color: #218838;
+}
+
+button {
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.bid {
+    background: #FF7F50; /* Cor para Bid */
+}
+
+button.andamento {
+    background: #5b7de2; /* Cor para Andamento */
+}
+
+button.entregue {
+    background: #47b97b; /* Cor para Entregue */
+}
+
+button.remover {
+    background: #dc3545; /* Cor para Remover */
+    width: auto;
+    padding: 5px 10px;
+}
+
+button.remover:hover {
+    background: #c82333; /* Hover para o botão de remover */
+}
